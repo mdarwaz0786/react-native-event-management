@@ -13,7 +13,7 @@ const SearchBar = () => {
       <TextInput
         style={styles.input}
         placeholder="Search for Weddings"
-        placeholderTextColor="black"
+        placeholderTextColor="rgb(182, 182, 182)"
         value={searchText}
         onChangeText={handleSearch}
       />
@@ -29,10 +29,10 @@ const styles = StyleSheet.create({
   input: {
     height: 50,
     borderColor: '#fff',
+    color: 'black',
     borderWidth: 1,
     borderRadius: 10,
     paddingLeft: 10,
-    color: 'black',
     backgroundColor: 'white',
   },
 });

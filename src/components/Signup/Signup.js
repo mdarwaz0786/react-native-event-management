@@ -1,4 +1,3 @@
-// SignupScreen.js
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
@@ -10,11 +9,14 @@ const Signup = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Sign Up</Text>
+      <Text style={styles.title}>Signup</Text>
 
-      {/* Email Field */}
+      {/* Name Field */}
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>Name</Text>
+        <Text style={styles.label}>
+          Name
+          <Text style={styles.asterisk}> *</Text>
+        </Text>
         <TextInput
           style={styles.input}
           placeholder="Enter your name"
@@ -25,7 +27,10 @@ const Signup = ({ navigation }) => {
 
       {/* Email Field */}
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>Email</Text>
+        <Text style={styles.label}>
+          Email
+          <Text style={styles.asterisk}> *</Text>
+        </Text>
         <TextInput
           style={styles.input}
           placeholder="Enter your email"
@@ -36,7 +41,10 @@ const Signup = ({ navigation }) => {
 
       {/* Password Field */}
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>Password</Text>
+        <Text style={styles.label}>
+          Password
+          <Text style={styles.asterisk}> *</Text>
+        </Text>
         <TextInput
           style={styles.input}
           placeholder="Enter your password"
@@ -48,7 +56,10 @@ const Signup = ({ navigation }) => {
 
       {/* Confirm Password Field */}
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>Confirm Password</Text>
+        <Text style={styles.label}>
+          Confirm Password
+          <Text style={styles.asterisk}> *</Text>
+        </Text>
         <TextInput
           style={styles.input}
           placeholder="Confirm your password"
@@ -60,7 +71,7 @@ const Signup = ({ navigation }) => {
 
       {/* Sign Up Button */}
       <TouchableOpacity style={styles.signupButton} onPress={() => navigation.navigate('Home')}>
-        <Text style={styles.buttonText}>Sign Up</Text>
+        <Text style={styles.buttonText}>Signup</Text>
       </TouchableOpacity>
 
       {/* Already have an account */}
@@ -96,30 +107,16 @@ const styles = StyleSheet.create({
     color: '#555',
     marginBottom: 5,
   },
+  asterisk: {
+    color: 'red',
+  },
   input: {
     backgroundColor: '#fff',
+    color: '#000',
     padding: 10,
     borderRadius: 5,
     borderWidth: 1,
     borderColor: '#ccc',
-  },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginVertical: 15,
-  },
-  rememberMeContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  checkboxWrapper: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  rememberText: {
-    fontSize: 15,
-    color: '#555',
   },
   signupButton: {
     backgroundColor: '#A63ED3',

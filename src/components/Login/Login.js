@@ -11,7 +11,10 @@ const Login = ({ navigation }) => {
 
       {/* Email Field */}
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>Email</Text>
+        <Text style={styles.label}>
+          Email
+          <Text style={styles.asterisk}> *</Text>
+        </Text>
         <TextInput
           style={styles.input}
           placeholder="Enter your email"
@@ -22,7 +25,10 @@ const Login = ({ navigation }) => {
 
       {/* Password Field */}
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>Password</Text>
+        <Text style={styles.label}>
+          Password
+          <Text style={styles.asterisk}> *</Text>
+        </Text>
         <TextInput
           style={styles.input}
           placeholder="Enter your password"
@@ -49,10 +55,6 @@ const Login = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    justifyContent: 'center',
-  },
   container: {
     padding: 20,
     margin: 20,
@@ -74,34 +76,16 @@ const styles = StyleSheet.create({
     color: '#555',
     marginBottom: 5,
   },
+  asterisk: {
+    color: 'red',
+  },
   input: {
     backgroundColor: '#fff',
+    color: 'black',
     padding: 10,
     borderRadius: 5,
     borderWidth: 1,
     borderColor: '#ccc',
-  },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginVertical: 15,
-  },
-  rememberMeContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  checkboxWrapper: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  rememberText: {
-    fontSize: 15,
-    color: '#555',
-  },
-  forgotPassword: {
-    fontSize: 15,
-    color: '#007bff',
   },
   loginButton: {
     backgroundColor: '#A63ED3',
